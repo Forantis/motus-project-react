@@ -11,6 +11,7 @@ export default function Grid({ searchedWord, response, counter, rowDone }: { sea
                     <tr key={i}>
                         {searchedWord.map((_, j) => (
                             <td key={j} className={
+                                // check if the letter is in the word and at the good position
                                 rowDone > i+1
                                     ? response[i*searchedWord.length+j] === searchedWord[j]
                                         ? "goodPosition"
