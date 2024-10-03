@@ -1,6 +1,6 @@
 import "./Grid.css"
 
-export default function Grid({ searchedWord, response, counter }: { searchedWord: string[], response: string[], counter: number }) {
+export default function Grid({ searchedWord, response, counter, rowDone }: { searchedWord: string[], response: string[], counter: number, rowDone: number }) {
 
     return (
         <table id = "gameGrid">

@@ -40,7 +40,7 @@ function App() {
     <>
       <h1>Wordle From Wish</h1>
       <table>
-        <Grid searchedWord={searchedWord} response={response} counter={counter}/>
+        <Grid searchedWord={searchedWord} response={response} counter={counter} rowDone={rowDone}/>
       </table>
       <Keyboard response = {response} setResponse = {setResponse} counter={counter} setCounter={setCounter}/>
       <RestartButton setWord={setWord} />
