@@ -8,3 +8,16 @@ td{
     height: 75px;
     content: none;
 }
+
+.goodPosition{
+    background-color: green;
+}
+
+.badPosition{
+    background-color: yellow;
+}
+
+.absentInTheWord{
+    background-color: red;
+}
+
