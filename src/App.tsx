@@ -18,7 +18,7 @@ function App() {
       <table>
         <Grid searchedWord={searchedWord} response={response}/>
       </table>
-      <Keyboard response = {response} setResponse = {setResponse} counter={setCounter}/>
+      <Keyboard response = {response} setResponse = {setResponse} counter={counter} setCounter={setCounter}/>
       <RestartButton setWord={setWord} />
 
     </>
