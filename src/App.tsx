@@ -16,7 +16,7 @@ function App() {
 
   // to follow the progress of the user and to know when to validate row
   useEffect(() => {
-    if(counter === searchedWord.length * rowDone+1) {
+    if(counter === (searchedWord.length-1) * rowDone+1) {
       setRowDone(rowDone + 1);
       console.log("rowDone", rowDone);
     }
