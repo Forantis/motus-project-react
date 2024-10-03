@@ -8,7 +8,15 @@ export default function Grid({ searchedWord, response, counter, rowDone }: { sea
                 {Array.from({ length: 6 }, (_, i) => (
                     <tr key={i}>
                         {searchedWord.map((_, j) => (
-                            <td key={j} >{response[i*searchedWord.length+j] ? response[i*searchedWord.length+j] : ""}</td>
+                            <td key={j} className={
+                                rowDone > i+1
+                                    ? response[i*searchedWord.length+j] === searchedWord[i*searchedWord.length+j]
+                                        ? "goodPosition"
+                                        : searchedWord.includes(response[i*searchedWord.length+j])
+                                            ? "badPosition"
+                                            : "absentInTheWord"
+                                    : ""
+                            }>{response[i*searchedWord.length+j] ? response[i*searchedWord.length+j] : ""}</td>
                         ))}
                     </tr>
                 ))}
