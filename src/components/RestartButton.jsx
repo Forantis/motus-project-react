@@ -1,4 +1,4 @@
-export default function RestartButton({setWord}){
+export default function RestartButton({setWord, setRowDone, setCounter, setResponse}) {
     const allPossibleWords = 
     [
         "bonjour", "amour", "chance", "soleil", "fleurs", "rêver", "éclair", 
@@ -11,6 +11,9 @@ export default function RestartButton({setWord}){
     function handleRestartClick(){
         const wordIndex = Math.floor(Math.random() * allPossibleWords.length)
         setWord(allPossibleWords[wordIndex]);
+        setRowDone(0);
+        setCounter(1);
+        setResponse([]);
     }
 
     return <button onClick={handleRestartClick}>Nouveau mot</button>

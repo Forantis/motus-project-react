@@ -44,7 +44,7 @@ function App() {
         <Grid searchedWord={searchedWord} response={response} counter={counter} rowDone={rowDone}/>
       </table>
       <Keyboard response = {response} setResponse = {setResponse} counter={counter} setCounter={setCounter}/>
-      <RestartButton setWord={setWord} />
+      <RestartButton setWord={setWord} setRowDone={setRowDone} setCounter={setCounter} setResponse={setResponse}/>
 
     </>
   )
