@@ -18,6 +18,7 @@ function App() {
   useEffect(() => {
     if(counter === searchedWord.length * rowDone+1) {
       setRowDone(rowDone + 1);
+      console.log("rowDone", rowDone);
     }
   }, [counter])
 
