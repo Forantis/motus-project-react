@@ -12,6 +12,14 @@ function App() {
   const [response, setResponse] = useState([])
   // counter to count how many letter has been submit by the user to act as a submit
   const [counter, setCounter] = useState(0)
+  const [rowDone, setRowDone] = useState(0)
+
+  // to follow the progress of the user and to know when to validate row
+  useEffect(() => {
+    if(counter === searchedWord.length * rowDone+1) {
+      setRowDone(rowDone + 1);
+    }
+  }, [counter])
 
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'Backspace') {
