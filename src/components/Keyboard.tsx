@@ -2,7 +2,7 @@ import Key from "./Key"
 import "./Keyboard.css"
 
 export default function Keyboard({response, setResponse, counter, setCounter}: {response: string[], setResponse: (response: string[]) => void, counter: number, setCounter: (counter: number) => void}) {
-    const keysLetters = ["A", "Z", "E", "R", "T", "Y", "U", "I", "O", "P", "Q", "S", "D", "F", "G", "H", "J", "K", "L", "M", "W", "X", "C", "V", "B", "N"];
+    const keysLetters = ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p", "q", "s", "d", "f", "g", "h", "j", "k", "l", "m", "w", "x", "c", "v", "b", "n"];
 
     function handleKeyClick(keyLetter: string) {
         setResponse([...response, keyLetter]);

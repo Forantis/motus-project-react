@@ -2,6 +2,8 @@ import "./Grid.css"
 
 export default function Grid({ searchedWord, response, counter, rowDone }: { searchedWord: string[], response: string[], counter: number, rowDone: number }) {
 
+    console.log("searchedWord", searchedWord);
+
     return (
         <table id = "gameGrid">
             <tbody>
@@ -10,7 +12,7 @@ export default function Grid({ searchedWord, response, counter, rowDone }: { sea
                         {searchedWord.map((_, j) => (
                             <td key={j} className={
                                 rowDone > i+1
-                                    ? response[i*searchedWord.length+j] === searchedWord[i*searchedWord.length+j]
+                                    ? response[i*searchedWord.length+j] === searchedWord[j]
                                         ? "goodPosition"
                                         : searchedWord.includes(response[i*searchedWord.length+j])
                                             ? "badPosition"
