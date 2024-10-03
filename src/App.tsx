@@ -9,6 +9,7 @@ function App() {
   const [word, setWord] = useState("salut")
   const searchedWord = word.split('');
   const [response, setResponse] = useState([])
+  // counter to count how many letter has been submit by the user to act as a submit
   const [counter, setCounter] = useState(0)
 
   return (
