@@ -9,14 +9,15 @@ function App() {
   const [word, setWord] = useState("salut")
   const searchedWord = word.split('');
   const [response, setResponse] = useState([])
+  const [counter, setCounter] = useState(0)
 
   return (
     <>
       <h1>Wordle From Wish</h1>
       <table>
-        <Grid searchedWord={searchedWord} />
+        <Grid searchedWord={searchedWord} response={response}/>
       </table>
-      <Keyboard response = {response} setResponse = {setResponse}/>
+      <Keyboard response = {response} setResponse = {setResponse} counter={setCounter}/>
       <RestartButton setWord={setWord} />
 
     </>
